@@ -1,0 +1,8 @@
+___pycache___/
+*.pyc 
+*.pyo 
+*.pyd 
+*.sqlite3
+*.log
+*.env
+**/migrations/
