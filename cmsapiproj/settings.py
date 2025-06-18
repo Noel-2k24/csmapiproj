@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'backendapp',
 ]
 
 MIDDLEWARE = [
@@ -74,8 +76,13 @@ WSGI_APPLICATION = 'cmsapiproj.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'clinic',
+        'USER':'root',
+        'PASSWORD':'madhavi@2002',
+        'HOST':'localhost',
+        'PORT':'3306',
+
     }
 }
 
