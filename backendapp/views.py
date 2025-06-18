@@ -79,9 +79,9 @@
 
 #     serializer = ConsultationBillingSerializer(bills, many=True)
 #     return Response(serializer.data)
-
+  
 from rest_framework import viewsets
-from .models import Appointment, Consultation, Doctor,ConsultationBill
+from .models import Appointment,Doctor,ConsultationBill #Consultation
 from .serializers import AppointmentSerializer, DoctorSerializer,ConsultationBillSerializer #ConsultationSerializer
 
 class DoctorViewSet(viewsets.ModelViewSet):
@@ -91,11 +91,12 @@ class DoctorViewSet(viewsets.ModelViewSet):
 class AppointmentViewSet(viewsets.ModelViewSet):
     queryset = Appointment.objects.all()
     serializer_class = AppointmentSerializer
-
-# class ConsultationViewSet(viewsets.ModelViewSet):
-#     queryset = Consultation.objects.all()
-#     serializer_class = ConsultationSerializer
+    
 
 class ConsultationBillViewSet(viewsets.ModelViewSet):
     queryset = ConsultationBill.objects.all()
     serializer_class = ConsultationBillSerializer    
+
+# class ConsultationViewSet(Consultationviewsets.ModelViewSet):
+#     queryset = Consultation.objects.all()
+#     serializer_class = ConsultationSerializer
