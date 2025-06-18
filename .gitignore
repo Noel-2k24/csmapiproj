@@ -6,3 +6,4 @@ ___pycache___/
 *.log
 *.env
 **/migrations/
+**/local_settings.py
